@@ -1,0 +1,18 @@
+@use "../abstracts/index" as *;
+
+.flex-box {
+	&--row {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	&--column {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+}
+
+.container {
+	@include set-container-width-sizes();
+	margin: 0 auto;
+}

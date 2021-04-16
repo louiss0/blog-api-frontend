@@ -1,0 +1,35 @@
+$text-alignments: ("left", "center", "right");
+
+$text-transforms: ("uppercase", "lowercase", "capitalize");
+
+$text-decorations: ("line-through", "underline", "overline");
+
+$font-weights: (500);
+
+@for $i from 1 to 6 {
+	.font-size\:#{$i}rem {
+		font-size: #{$i}rem;
+	}
+
+	.font-size\:#{$i}\/#{5rem} {
+		font-size: #{$i + .5}rem;
+	}
+}
+
+@each $text-alignment in $text-alignments {
+	.txt--#{$text-alignment} {
+		text-align: #{$text-alignment};
+	}
+}
+
+@each $text-transform in $text-transforms {
+	.text-transform--#{$text-transform} {
+		text-transform: #{$text-transform};
+	}
+}
+
+@each $text-decoration in $text-decorations {
+	.text-decoration--#{$text-decoration} {
+		text-decoration: #{$text-decoration};
+	}
+}

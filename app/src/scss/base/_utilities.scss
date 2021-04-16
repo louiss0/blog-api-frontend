@@ -1,0 +1,65 @@
+$directions: ("left", "right", "top", "bottom");
+
+@each $direction in $directions {
+	@for $i from 1 through 30 {
+		.mgn-#{$direction}\:#{$i} {
+			margin-#{$direction}: #{$i}px;
+		}
+
+		.pdg-#{$direction}\:#{$i} {
+			padding-#{$direction}: #{$i}px;
+		}
+	}
+}
+
+@for $i from 10 through 100 {
+	@if $i % 5 == 0 {
+		.width\:#{$i}\% {
+			width: #{$i + 0%};
+		}
+
+		.height\:#{$i}\% {
+			height: #{$i + 0%};
+		}
+
+		.width\:#{$i}vh {
+			width: #{$i}vh;
+		}
+
+		.height\:#{$i}vh {
+			height: #{$i + 0%}vh;
+		}
+	}
+}
+
+@for $i from 0 through 5 {
+	@for $j from 0 through 5 {
+		.mgn\:#{$i}\|#{$j}em {
+			margin: #{$i}em #{$j}em;
+		}
+
+		.mgn\:#{$i}\/5\|#{$j}\/5em {
+			margin: #{$i + .5}em #{$j + .5}em;
+		}
+
+		.pdg\:#{$i}\|#{$j}em {
+			padding: #{$i}em #{$j}em;
+		}
+
+		.pdg\:#{$i}\/5\|#{$j}\/5em {
+			padding: #{$i + .5}em #{$j + .5}em;
+		}
+	}
+}
+
+$alignments: ("flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly");
+
+@each $alignment in $alignments {
+	.justify-content--#{$alignment} {
+		justify-content: #{$alignment};
+	}
+
+	.align-items--#{$alignment} {
+		align-items: #{$alignment};
+	}
+}

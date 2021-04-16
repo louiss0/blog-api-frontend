@@ -1,0 +1,13 @@
+app/node_modules
+
+node_modules
+
+.vscode
+
+.git 
+
+README.md
+
+dockerfiles
+
+env-files
